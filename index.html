@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Lung X-Ray AI | Triage Dashboard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="shell">
+<header>
+  <div>
+    <div class="brand"><span class="logo">LX</span> Lung X-Ray <b>AI</b></div>
+    <p class="sub">Chest X-ray triage & workflow intelligence</p>
+  </div>
+  <div class="online"><i></i> DEMO ENGINE ONLINE</div>
+</header>
+
+<section class="hero">
+  <div>
+    <div class="eyebrow">HEALTHCARE AI · PORTFOLIO DEMO</div>
+    <h1>Prioritize abnormal scans.<br><em>Accelerate clinical review.</em></h1>
+    <p>Interactive demonstration of the batch-upload triage workflow from the original Python project. Upload one or more chest X-ray images to preview the workflow and receive a deterministic demo triage result.</p>
+  </div>
+  <div class="engine">
+    <span>INFERENCE ENGINE</span>
+    <strong>CNN Triage v2.4</strong>
+    <small>Batch workflow · image hashing · confidence simulation</small>
+    <div class="engine-state">● Operational</div>
+  </div>
+</section>
+
+<section class="metrics">
+  <div><span>Historical Scans</span><strong>1,500</strong><small>baseline records</small></div>
+  <div><span>Real-World Accuracy</span><strong>89.2%</strong><small>project baseline</small></div>
+  <div><span>Critical False-Negative Rate</span><strong>6.1%</strong><small>historical baseline</small></div>
+</section>
+
+<main class="grid">
+<section class="panel upload">
+  <div class="title"><b>01</b><div><div class="eyebrow">SCAN INTAKE</div><h2>Batch Upload Pipeline</h2></div></div>
+  <label class="drop" id="drop">
+    <input id="files" type="file" accept="image/png,image/jpeg,image/jpg" multiple>
+    <span class="upload-icon">＋</span>
+    <strong>Drop chest X-rays here</strong>
+    <small>PNG or JPEG · Multiple files supported</small>
+  </label>
+  <div class="privacy">🔒 Portfolio demo only · Do not upload real patient-identifiable medical images.</div>
+  <div id="queue" class="queue"></div>
+</section>
+
+<section class="panel result">
+  <div class="title"><b>02</b><div><div class="eyebrow">TRIAGE OUTPUT</div><h2>Diagnostic Workflow</h2></div></div>
+  <div id="empty" class="empty"><div>◉</div><strong>Awaiting scan</strong><span>Upload an X-ray to start the demo workflow.</span></div>
+  <div id="results"></div>
+</section>
+
+<section class="panel feedback">
+  <div class="title"><b>03</b><div><div class="eyebrow">CLINICAL FEEDBACK LOOP</div><h2>Physician Verification</h2></div></div>
+  <p>In the original application, an attending physician can confirm or correct an AI result. This feedback is appended to the historical outcome dataset for model-monitoring purposes.</p>
+  <div id="feedback" class="feedback-msg">No review action recorded.</div>
+</section>
+</main>
+
+<footer>
+<span>Lung X-Ray AI · Interactive portfolio demo</span>
+<span>Not a medical diagnostic device. Results are simulated for demonstration.</span>
+</footer>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
